@@ -1,9 +1,7 @@
 pipeline {
     agent any
     
-    tools {
-        maven 'Maven_Home'
-    }
+    sh 'opt/opt/apache-maven-3.9.6/bin/mvn
 
     stages {
         stage('Checkout') {
