@@ -1,7 +1,7 @@
 pipeline{
 
 tools {
-         Maven "maven_home"
+         maven "maven_home"
 }
 stage ('Checkout') {
 
