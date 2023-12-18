@@ -1,9 +1,8 @@
-node {
+pipeline{
 
 tools {
-        // Install the Maven version configured as "M3" and add it to the path.
-        maven "M3"
-    }
+         Maven"maven_home"
+}
 stage ('Checkout') {
 
 checkout scm
@@ -18,7 +17,7 @@ sh "${mvnHome}/bin/mvn sonar:sonar -f MyAwesomeApp/pom.xml"
 }
 stage ('DEV Deploy')  {
       echo "deploying to DEV Env "
-      deploy adapters: [tomcat8(credentialsId: 'Tomcat', path: '', url: 'http://54.89.212.24:8080/')], contextPath: null, war: '**/*.war'
+      deploy adapters: [tomcat8(credentialsId: 'da622b00-f7f3-4a3a-b4fc-985bdfe6000b', path: '', url: 'http://34.205.24.116:8080')], contextPath: null, war: '**/*.war'
     }
 stage ('DEV Approve') {
 echo "Taking approval from DEV"
