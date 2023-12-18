@@ -1,8 +1,6 @@
-pipeline{
+node{
 
-tools {
-         maven "maven_home"
-}
+ maven "maven_home"
 stage ('Checkout') {
 
 checkout scm
