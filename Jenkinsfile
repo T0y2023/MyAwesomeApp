@@ -1,6 +1,8 @@
 node{
 
+tools{ 
  maven "Maven_Home"
+} 
 stage ('Checkout') {
 
 checkout scm
